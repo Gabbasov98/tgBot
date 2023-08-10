@@ -1,0 +1,54 @@
+@import 'vars';
+html {
+    width: 100%;
+    &.fixed-body {
+        overflow-y: hidden;
+    }
+}
+
+.m-page {
+    width: calc(100vw - (100vw - 100%));
+    overflow-x: hidden;
+    font-family: $font1;
+    font-weight: 500;
+    color: $black;
+    font-size: calc(1920px * (16 / 1920));
+    @media screen and (max-width: 1920px){
+        font-size: calc(100vw * (16 / 1920));
+    }
+    &.fixed-body,
+    &.fixed-body2{
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4em;
+}
+
+a {
+    &:hover {
+        color: $primary;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .m-page{
+        font-size: calc(100vw * (16 / 768));
+    }
+
+    .container{
+        padding: 0 1.8em;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .m-page{
+        font-size: calc(100vw * (16 / 414));
+    }
+}
